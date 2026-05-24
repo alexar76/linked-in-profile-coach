@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Strip AI-tool co-author trailers from commit messages."""
+
+import re
+import sys
+
+COAUTHOR_RE = re.compile(
+    r"^Co-[Aa]uthored-[Bb]y:.*(?:"
+    r"cursoragent@cursor\.com|"
+    r"@anthropic\.com|"
+    r">\s*Cursor\s*<|"
+    r">\s*Claude\b"
+    r").*\n?",
+    re.MULTILINE,
+)
+
+
+def main() -> int:
+    if len(sys.argv) < 2:
+        return 0
+
+    path = sys.argv[1]
+    try:
+        with open(path, encoding="utf-8") as handle:
+            message = handle.read()
+    except OSError:
+        return 0
+
+    cleaned = COAUTHOR_RE.sub("", message).rstrip()
+    if cleaned:
+        cleaned += "\n"
+
+    with open(path, "w", encoding="utf-8") as handle:
+        handle.write(cleaned)
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
