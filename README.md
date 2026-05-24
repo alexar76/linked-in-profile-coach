@@ -9,6 +9,8 @@ Flutter desktop/mobile app: import **24 LinkedIn sections**, merge on refresh, a
 
 **Live web demo:** [alexar76.github.io/linked-in-profile-coach](https://alexar76.github.io/linked-in-profile-coach/) (browser preview; desktop builds keep full local storage).
 
+> **Pages one-time setup:** [Settings → Pages](https://github.com/alexar76/linked-in-profile-coach/settings/pages) → **Build and deployment** → Source: **GitHub Actions**. Then re-run **Actions → Web Demo** if the first deploy failed.
+
 ## Screenshots
 
 | Overview | LinkedIn | AI profile |

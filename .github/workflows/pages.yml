@@ -38,5 +38,11 @@ jobs:
         with:
           path: build/web
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-demo
+          path: build/web
+          if-no-files-found: error
+
       - uses: actions/deploy-pages@v4
         id: deployment
