@@ -10,7 +10,10 @@ iOS is **not** distributed via GitHub — only App Store / TestFlight.
 |------|----------|
 | `ProfileCoach-v1.0.0-macos.zip` | macOS (Apple Silicon CI runner; unzip → `linkedin_profile_coach.app`) |
 | `ProfileCoach-v1.0.0-windows-x64.zip` | Windows 64-bit |
+| `ProfileCoach-v1.0.0-linux-x64.zip` | Linux 64-bit |
 | `ProfileCoach-v1.0.0-android-universal.apk` | Android (sideload; Play Store uses AAB separately) |
+
+**Web demo** (no install): [GitHub Pages](https://alexar76.github.io/linked-in-profile-coach/) — deployed from `main` on every push.
 
 Version in the filename matches the git tag (e.g. tag `v1.0.0`).
 
@@ -25,7 +28,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-4. GitHub Actions workflow **Release** builds macOS, Windows, and Android, then creates a Release with assets.
+4. GitHub Actions workflow **Release** builds macOS, Windows, Linux, and Android, then creates a Release with assets.
 5. Edit release notes on GitHub if needed (auto-generated notes are a starting point).
 
 Manual run: **Actions → Release → Run workflow** (uses the current commit; tag the commit yourself for a proper versioned release).
@@ -67,6 +70,15 @@ flutter build windows --release
 ```
 
 Zip `build\windows\x64\runner\Release\` and ship the archive.
+
+### Linux
+
+```bash
+flutter build linux --release
+# bundle: build/linux/x64/release/bundle/
+```
+
+Zip the bundle directory for distribution (CI produces `ProfileCoach-*-linux-x64.zip`).
 
 ### Android
 
