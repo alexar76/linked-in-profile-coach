@@ -1,3 +1,0 @@
-tags:
-  doc-screenshots:
-    skip: "Headless toImage hangs — use python3 tool/generate_doc_screenshots.py"

@@ -12,8 +12,9 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# --- IDE / editors ---
+# --- IDE / editors / local agents (never publish) ---
 .claude/
+.cursor/
 .idea/
 .vscode/
 *.iml
