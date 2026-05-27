@@ -13,7 +13,6 @@ Thumbs.db
 Desktop.ini
 
 # --- IDE / editors ---
-.claude/
 .idea/
 .vscode/
 *.iml
