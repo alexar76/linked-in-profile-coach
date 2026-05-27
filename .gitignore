@@ -12,7 +12,7 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# --- IDE / editors / local agents (never publish) ---
+# --- IDE / editors / local agents ---
 .claude/
 .cursor/
 .idea/
