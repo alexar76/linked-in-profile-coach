@@ -1,15 +1,16 @@
+<!-- aicom-mirror-notice -->
+> **Mirror — read-only.**
+> The canonical source for `linkedin-profile-coach` lives in the AI-Factory monorepo.
+> Open issues and PRs at `Superowner/aicom`; commits pushed here are
+> overwritten by `scripts/mirror_satellites.sh` on the next sync run.
+> See `docs/repository-canonical-policy.md` for the policy.
+
 # LinkedIn Profile Coach
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/alexar76/linked-in-profile-coach/ci.yml?branch=main&label=CI)](https://github.com/alexar76/linked-in-profile-coach/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/actions/workflow/status/alexar76/linked-in-profile-coach/release.yml?branch=main&label=Release)](https://github.com/alexar76/linked-in-profile-coach/actions/workflows/release.yml)
-[![Web demo](https://img.shields.io/github/actions/workflow/status/alexar76/linked-in-profile-coach/pages.yml?branch=main&label=Web%20demo)](https://alexar76.github.io/linked-in-profile-coach/)
 
 Flutter desktop/mobile app: import **24 LinkedIn sections**, merge on refresh, analytics dashboard, AI draft, compare, scoring, insights, snapshots, and `.docx` resume support.
-
-**Live web demo:** [alexar76.github.io/linked-in-profile-coach](https://alexar76.github.io/linked-in-profile-coach/) (browser preview; desktop builds keep full local storage).
-
-> **Pages one-time setup:** [Settings → Pages](https://github.com/alexar76/linked-in-profile-coach/settings/pages) → **Build and deployment** → Source: **GitHub Actions**. Then re-run **Actions → Web Demo** if the first deploy failed.
 
 ## Screenshots
 
@@ -48,9 +49,7 @@ Binaries are published on **[GitHub Releases](https://github.com/alexar76/linked
 |----------|------|
 | macOS | `ProfileCoach-vX.Y.Z-macos.zip` |
 | Windows | `ProfileCoach-vX.Y.Z-windows-x64.zip` |
-| Linux | `ProfileCoach-vX.Y.Z-linux-x64.zip` |
 | Android | `ProfileCoach-vX.Y.Z-android-universal.apk` |
-| Web demo | [GitHub Pages](https://alexar76.github.io/linked-in-profile-coach/) (no install) |
 
 **iOS** — App Store / TestFlight only, not via GitHub.
 
