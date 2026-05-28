@@ -113,9 +113,6 @@ venv/
 # --- Logs ---
 *.log
 
-# --- Cursor / local agent session (if created inside repo) ---
-.cursor/
-
 # --- Local-only deploy / dual-remote push (Gitea creds pattern — not for public GitHub) ---
 docs/PUSH_SETUP.md
 tool/setup-remotes.sh
