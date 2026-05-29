@@ -1,20 +1,8 @@
 ## Summary
 
-<!-- What does this PR change? -->
+<!-- What does this PR change and why? -->
 
-## Type
+## Test plan
 
-- [ ] Bug fix
-- [ ] Feature
-- [ ] Docs / tooling
-- [ ] Refactor
-
-## Testing
-
-- [ ] `flutter analyze`
-- [ ] `flutter test`
-- [ ] Tested on: <!-- macOS / Windows / Android -->
-
-## Screenshots
-
-<!-- If UI changed, add before/after -->
+- [ ] CI green locally or on fork
+- [ ] Docs updated if behavior changed
