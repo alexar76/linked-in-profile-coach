@@ -1,0 +1,120 @@
+# =============================================================================
+# Profile Coach — keep source, assets, docs, CI config; ignore build/cache/secrets
+# =============================================================================
+
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- IDE / editors / local agents ---
+.claude/
+.cursor/
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+.classpath
+.project
+.settings/
+.atom/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# --- Flutter / Dart ---
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+**/doc/api/
+
+# Symbolication / obfuscation (release tooling)
+app.*.symbols
+app.*.map.json
+
+# --- Platform: ephemeral & local build outputs ---
+**/Flutter/ephemeral/
+**/Pods/
+**/ios/Flutter/.last_build_id
+**/ios/.symlinks/
+**/ios/Pods/
+**/linux/flutter/ephemeral/
+**/windows/flutter/ephemeral/
+**/windows/x64/
+**/windows/x86/
+**/macos/Flutter/ephemeral/
+
+# Android (machine-specific + build artifacts)
+**/android/local.properties
+**/android/.gradle/
+**/android/captures/
+**/android/**/.cxx/
+**/android/key.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/*.keystore
+**/*.jks
+
+# Xcode (macOS/iOS if added later)
+**/dgph
+**/xcuserdata/
+**/*.xcuserstate
+**/*.xcworkspace/xcuserdata/
+
+# --- Secrets & env (never commit) ---
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+**/credentials.json
+**/service-account*.json
+
+# --- Local app data (SQLite DB on device / dev machine) ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Release packages (built locally or in CI, attached to GitHub Releases) ---
+ProfileCoach-*.zip
+ProfileCoach-*.apk
+ProfileCoach-*.dmg
+ProfileCoach-*.aab
+build/release/
+
+# --- Python (icon / screenshot tools in tool/) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Logs ---
+*.log
+
+# --- Local-only deploy / dual-remote push (Gitea creds pattern — not for public GitHub) ---
+docs/PUSH_SETUP.md
+tool/setup-remotes.sh
+tool/push-remotes.sh
+tool/create-gitea-repo.sh
