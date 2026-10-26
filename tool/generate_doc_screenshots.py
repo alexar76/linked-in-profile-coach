@@ -5,6 +5,10 @@ from __future__ import annotations
 
 import textwrap
 from pathlib import Path
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "images"
