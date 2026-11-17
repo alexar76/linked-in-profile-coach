@@ -32,9 +32,9 @@ jobs:
 
       - name: Package macOS (.zip)
         run: |
-          VERSION="${{ github.ref_name }}"
-          APP="build/macos/Build/Products/Release/${{ env.APP_BUNDLE_NAME }}.app"
-          OUT="build/${{ env.ARTIFACT_PREFIX }}-${VERSION}-macos.zip"
+          VERSION="$GITHUB_REF_NAME"
+          APP="build/macos/Build/Products/Release/${APP_BUNDLE_NAME}.app"
+          OUT="build/${ARTIFACT_PREFIX}-${VERSION}-macos.zip"
           ditto -c -k --keepParent "$APP" "$OUT"
           ls -lh "$OUT"
 
@@ -63,9 +63,9 @@ jobs:
       - name: Package Windows (.zip)
         shell: pwsh
         run: |
-          $version = "${{ github.ref_name }}"
+          $version = $env:GITHUB_REF_NAME
           $src = "build\windows\x64\runner\Release"
-          $out = "build\${{ env.ARTIFACT_PREFIX }}-${version}-windows-x64.zip"
+          $out = "build\$($env:ARTIFACT_PREFIX)-${version}-windows-x64.zip"
           Compress-Archive -Path "$src\*" -DestinationPath $out -Force
           Get-Item $out
 
@@ -98,9 +98,9 @@ jobs:
 
       - name: Rename APK
         run: |
-          VERSION="${{ github.ref_name }}"
+          VERSION="$GITHUB_REF_NAME"
           SRC="build/app/outputs/flutter-apk/app-release.apk"
-          OUT="build/${{ env.ARTIFACT_PREFIX }}-${VERSION}-android-universal.apk"
+          OUT="build/${ARTIFACT_PREFIX}-${VERSION}-android-universal.apk"
           cp "$SRC" "$OUT"
           ls -lh "$OUT"
 
@@ -133,8 +133,8 @@ jobs:
 
       - name: Package Linux (.zip)
         run: |
-          VERSION="${{ github.ref_name }}"
-          OUT="${{ github.workspace }}/build/${{ env.ARTIFACT_PREFIX }}-${VERSION}-linux-x64.zip"
+          VERSION="$GITHUB_REF_NAME"
+          OUT="$GITHUB_WORKSPACE/build/${ARTIFACT_PREFIX}-${VERSION}-linux-x64.zip"
           (cd build/linux/x64/release/bundle && zip -r "$OUT" .)
           ls -lh "$OUT"
 
